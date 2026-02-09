@@ -3,7 +3,7 @@ function App() {
 
   return (
     <>
-        <h1>Titulo de la pagina</h1>
+        <h1 className="">Titulo de la pagina</h1>
     </>
   )
 }
