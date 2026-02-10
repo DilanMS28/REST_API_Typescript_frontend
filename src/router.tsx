@@ -1,0 +1,15 @@
+import {createBrowserRouter} from 'react-router-dom';
+import Layout from './layouts/Layout';
+import Products from './views/Products';
+import NewProduct from './views/NewProduct';
+
+export const router = createBrowserRouter([
+    {
+        path: "/", 
+        element: <Layout />, 
+        children: [
+            {element: <Products />, index: true}, //pagina principal
+            {path: "productos/nuevo", element: <NewProduct />}//agregar nuevo producto
+        ] 
+    }
+])
