@@ -3,7 +3,7 @@ import Layout from './layouts/Layout';
 import Products from './views/Products';
 import {loader as productsLoader} from './views/Products';
 import NewProduct, {action as newProductAction} from './views/NewProduct';
-import EditProduct, {loader as EditProductLoader} from './views/EditProduct';
+import EditProduct, {loader as EditProductLoader, action as editProductAction} from './views/EditProduct';
 
 export const router = createBrowserRouter([
     {
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
         children: [
             {element: <Products />, index: true, loader: productsLoader}, //pagina principal
             {path: "productos/nuevo", element: <NewProduct />, action: newProductAction},//agregar nuevo producto
-            {path: "productos/:id/editar", element: <EditProduct />, loader: EditProductLoader}//editar producto (ROA)
+            {path: "productos/:id/editar", element: <EditProduct />, loader: EditProductLoader, action: editProductAction}//editar producto (ROA)
         ] 
     }
 ])
